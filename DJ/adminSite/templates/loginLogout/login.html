@@ -1,0 +1,33 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static "loginLogout/login.css" %}">
+{% endblock %}
+
+{% block title%} Register/login {% endblock %}
+
+{% block body %}
+    <div id="Main">
+        <h3>Login</h3>
+        <div id="Form">
+            <form action="">
+                <label for="username">UserName: </label>
+                <input type="text" name="username" id="username"><br>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password"><br>
+                <input type="submit" name="login" value="Login"><br><br>
+                <input type="submit" name="Register" value="Register">
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}
