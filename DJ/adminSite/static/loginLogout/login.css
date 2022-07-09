@@ -20,26 +20,40 @@ label{
     text-align: right;
 }
 input[type= "text"], input[type="password"]{
-    
-    /* display: flex; */
-    /* justify-content: center; */
     width: 70%;
-    /* margin: auto; */
     border: 2px solid blue;
     margin-top: 19px;
     max-width: 350px;
     box-sizing: border-box;
-    /* margin: auto; */
-    /* position: fixed;
-    top: 40%; */
     padding: 15px;  
 }
 input[type="submit"]{
     padding: 5px;
     border: 2px solid green;
-    border-radius: 15%;
+    border-radius: 9%;
+    text-align: center;
     border-spacing: 10px;
+    width:83px;
     color: white;
     background-color: green;
-    
+    margin-left: 40%;
+}
+span{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+a{
+    display: inline-block;
+    padding: 5px;
+    border: 2px solid green;
+    border-radius: 9%;
+    text-align: center;
+    border-spacing: 10px;
+    width:70px;
+    color: white;
+    background-color: green;
+    margin-left: 10%;
+    text-decoration: none;
 }

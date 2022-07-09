@@ -7,5 +7,10 @@
 {% block body %}
 
     <h1>Welcome to Our First APp</h1>
+    <ul>
+        {% for customer in customerDetails %}
+            <li>{{customer.username}} {{customer.password}}</li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}

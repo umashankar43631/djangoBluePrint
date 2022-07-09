@@ -17,9 +17,10 @@
                 <label for="username">UserName: </label>
                 <input type="text" name="username" id="username"><br>
                 <label for="password">Password: </label>
-                <input type="password" name="password" id="password"><br>
+                <input type="password" name="password" id="password"><br><br>
                 <input type="submit" name="login" value="Login"><br><br>
-                <input type="submit" name="Register" value="Register">
+                <span>No account?</span>
+                <a href="{% url 'Register' %}">Register</a>
             </form>
         </div>
     </div>
