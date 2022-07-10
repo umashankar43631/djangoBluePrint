@@ -2,12 +2,23 @@ from xml.dom.minidom import CharacterData
 from django.db import models
 from django.forms import CharField
 from django.db import models
+from django.utils.text import slugify
+from django.urls import reverse
 
 # Create your models here.
 class Login(models.Model):
     username = models.CharField(max_length = 20)
     password = models.CharField(max_length = 20)
     dateOfBirth = models.DateField(null= True)
+    slug = models.SlugField(null=False, default="", db_index= True,)
+
+    def get_absolute_url(self):
+        return reverse("detail", args=[self.slug])
+    
+    # def save(self, *args, **kwargs):
+    #     self.slug = slugify(self.username)
+    #     super().save(*args, **kwargs)
+    
     def __str__(self):
         return self.username
 
@@ -55,3 +66,8 @@ class Login(models.Model):
 """
     
         
+""" Super user 
+        username: shankar8331
+        email: .mulakalapalli@gmail.com
+        password: Uma12345
+"""

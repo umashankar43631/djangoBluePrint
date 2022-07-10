@@ -9,8 +9,14 @@
     <h1>Welcome to Our First APp</h1>
     <ul>
         {% for customer in customerDetails %}
-            <li>{{customer.username}} {{customer.password}}</li>
-        {% endfor %}
+            <li>{{customer.slug}}</li>
+            {% comment %} <li><a href="{% url "detail" customer.slug %}">  {{customer.username}} </a>{{customer.password}}</li> {% endcomment %}
+            <li><a href="{{customer.get_absolute_url}}">  {{customer.username}} </a>{{customer.password}}</li>
+
+         {% endfor %}
     </ul>
+    <hr>
+    <br>
+    <p>Total number of Customers are: {{customer_count}}</p>
 
 {% endblock %}
